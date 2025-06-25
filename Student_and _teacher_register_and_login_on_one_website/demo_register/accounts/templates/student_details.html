@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Student Details</h1>
+
+<h3> Email : {{ user.email }}</h3>
+<h3> Student Name : {{ user.student.name}}</h3>
+<h3> Phone no. : {{ user.student.phone}}</h3>
+<h3> Address : {{ user.student.address}}</h3>
+
+<h4> <a href="{% url 'Teacher_logout' %}"> Logout</a> </h4>
+
+</body>
+</html>

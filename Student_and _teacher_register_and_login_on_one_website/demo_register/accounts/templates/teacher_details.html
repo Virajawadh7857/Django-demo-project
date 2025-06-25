@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Teacher Details</h1>
+
+<h3> Email : {{ user.email }}</h3>
+<h3> Teacher Name : {{ user.teacher.name}}</h3>
+<h3> Age : {{ user.teacher.age}}</h3>
+
+<h4> <a href="{% url 'Teacher_logout' %}"> Logout</a> </h4>
+
+</body>
+</html>

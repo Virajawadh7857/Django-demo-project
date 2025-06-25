@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Contact US{% endblock%}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #div1{border: 3px;border-style : groove;background: lightseagreen;color: blue;{#width: 40%;#}}
+        #h31{background-color: yellowgreen;color: black;margin-top: 0px;border-radius: 8px;
+            margin-right: 2px;padding: 7px;}
+        form{padding: 10px; background-color: #cc1111; color: black;}
+        #col2h1{ color: red ; font-family: cursive;}
+        hr{border-top: 5px solid red;}
+        body{background-color:tan;}
+        #div2{margin-top: 54px;}
+        h2{color: #3875d7;background-color:lightgreen;position: relative;margin-top: 15px;padding: 15px;}
+    </style>
+</head>
+
+<body>
+<div class="text-center" id="div2">
+    <h2><b> Please Reach US </b></h2>
+</div>
+
+<div class="container" id="con1">
+    <div class="row">
+        <div class="col-md-6"  >
+            <div id="div1">
+                <h3 id="h31" class="text-center"><!--{{ content }}--> ContactUS form</h3>
+                <form method="POST">
+                    {% csrf_token%}
+                    {{ cform }}<br>
+                    <center><button type="submit" class="btn btn-success">Submit</button></center>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6" >
+            <h1 id="col2h1">Contact US</h1>
+            <hr>
+            <p><span class="glyphicon glyphicon-map-marker lg"></span>&nbsp;Bapunagar,SR nagar,Hyderabad-500016</p>
+            <p><span class="glyphicon glyphicon-envelope"></span>  info@gtsdatabaseschools.com</p>
+            <p><span class="glyphicon glyphicon-earphone"></span> +91 8179817681</p>
+            <p><span class="glyphicon glyphicon-time"></span>&nbsp;MON - SAT : 24/7</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock%}

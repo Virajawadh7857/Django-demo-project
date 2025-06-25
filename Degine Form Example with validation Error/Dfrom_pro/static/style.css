@@ -1,0 +1,28 @@
+.contact-form {text-align: left; padding: 20px;}
+ label {font-size: 16px;}
+ span{color:#BF2222;}
+ .form-control {
+  box-shadow: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 45px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+ .form-control:active, .form-control:focus{
+  outline: none;
+  box-shadow: none;
+  border-color: #190182;
+}
+ .btn-primary{  background: #190182; padding: 8px 32px;}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus{background: #BF2222; box-shadow: none; outline: none;}
+.contact-info{text-align: left; margin-top: 118px; margin-left: 25px;}
+.contact-info h3{ letter-spacing: 3px; }
+.contact-info p{ font-size: 16px; display: flex;}
+.contact-info p i{ font-size: 16px; color: #BF2222; padding: 0px 5px;}
+
+.invalid-feedback {
+    font-size: 70%;
+    color: #BF2222;
+}

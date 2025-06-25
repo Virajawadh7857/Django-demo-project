@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6 bg-warning">
+                <h3>  Welcome To My Password Reset Project. </h3>
+                {% if request.user.is_authenticated %}
+
+                <p>Username: {{ request.user.username }}</p>
+                <p>Name: {{ request.user.get_full_name }}</p>
+                <p>Email: {{ request.user.email }}</p>
+                <br>
+                <a href="{% url 'logout_user' %}"><i>logout</i></a>
+
+                {% else %}
+                <a href="{% url 'login_user' %}"><i>login</i></a>
+                <br>
+                <a href="{% url 'User_Registration' %}"><i>sign up</i></a>
+                {% endif %}
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+{% endblock %}

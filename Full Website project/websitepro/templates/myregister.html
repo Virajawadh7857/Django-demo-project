@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Registration Page {% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register Page</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{background-color:chocolate;}
+        form{background-color: cadetblue;padding: 10px;border-radius: 10px;border: 4px solid cadetblue;}
+        #con1{margin-top: 37px}
+        h1{color: #3875d7;background-color:lightgreen;position: relative;margin-top: 15px;padding: 15px;}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/login/" style="color: orange;">Django World.com</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="/registration/">Home</a></li>
+        <li><a href="/registration/">About</a></li>
+        <li><a href="/registration/">Contactus</a></li>
+        <li><a href="/registration/">Services</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/#/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container" id="con1">
+    <div class="starter-template  bodymain">
+        <h1>Welcome to <b>Register</b> page</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4" >
+            <form method="POST" class="form-group">
+                {% csrf_token%}
+                {{ rform }}<br>
+                <center><button type="submit" class="btn btn-info">Submit</button></center>
+            </form><br>
+            <h4 style="float: right;color: red;margin-top: -13px;">
+                <a href="/#/" class="text-right">Loggin here</a>
+            </h4>
+        </div><!-- .col-md-4 -->
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}

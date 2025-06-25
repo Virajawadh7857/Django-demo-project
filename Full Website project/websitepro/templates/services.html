@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} services {% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>Services page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'css/main.css' %}" type="text/css" />
+    <style>
+        body{background-color:chocolate;}
+    table{background: antiquewhite;}
+    thead{background: burlywood;}
+    #con1{margin-top: 37px}
+    </style>
+</head>
+<body>
+<div class="container" id="con1">
+    <h1 class="courseh1">Available Courses</h1>
+    <table class="table
+                        table-striped
+                        table-bordered
+                        table-hover
+                        table-condensed
+                        table-responsive" >
+        <thead>
+        <tr>
+            <th>Course No </th>
+            <th>Course Name</th>
+            <th>Duration</th>
+            <th>Content</th>
+            <th>Trainer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>01</td>
+            <td>Python</td>
+            <td>45 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here </a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Django</td>
+            <td>45 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_blank"> Click here </a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Oracle</td>
+            <td>30 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>SQL Server</td>
+            <td>30 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>SQL DBA</td>
+            <td>45 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>MSBI</td>
+            <td>45 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>POWER BI</td>
+            <td>30 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        <tr>
+            <td>07</td>
+            <td>C Langugae</td>
+            <td>45 days</td>
+            <td><a href="{% static 'other files/Python.pdf' %}" target="_top"> Click here</a></td>
+            <td>Mr. Narayana</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" >
+            <h1 class="courseh1">Course Highlights</h1>
+            <ol><b>
+                <li>We are providing high-class training.</li>
+                <li>Students can directly interact with trainer for any clarifications.</li>
+                <li>Soft copies will be provided for all concepts.</li>
+                <li>We provide 24/7 lab fecility along with coordinator.</li>
+                <li>One relatime project will be given for every course.</li>
+                <li>Three realtime projects will be implemented by using Django Framework.</li>
+                <li>Projects are implemented in the presence of Trainer</li>
+                <li>On-demand batch will be started at your comfortable time</li>
+                <li>Interview guidance will be given to all students.</li>
+                <li>All trainings are very interactive.</li></b>
+            </ol>
+        </div>
+        <div class="col-sm-6">
+            <img src ="{% static 'images/class.jpeg' %}" class="img-thumbnail" style="width: 100%; height: 100%; margin-top: 30px">
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}

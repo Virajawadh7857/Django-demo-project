@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Student Register Form</h1>
+<form method="post" novalidate>
+    {% csrf_token %}
+    {{ suf.as_p }}
+    {{ sup.as_p }}
+    <input type="submit">
+</form>
+
+</body>
+</html>
